@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         // After you're done implementing your method, call on it here. You can remove this example below
         
         thisIsAnExample()
+        makeShoppingListWithItems(nameOfItems, itemQuantity: quantityOfItems)
         
     }
     
@@ -36,6 +37,45 @@ class ViewController: UIViewController {
     
     
     // Implement your method here
+    
+    func makeShoppingListWithItems(itemName: Array<String>, itemQuantity: Array<Int>) -> Array<String> {
+        
+        for (key, value) in itemName.enumerate() {
+            shoppingList.append("\(key + 1). \(itemQuantity[key]) \(value)")
+        }
+        
+        print(shoppingList)
+        
+        return shoppingList
 
     
+    /*  func quantityString(quantity: Array<Int>) -> Array<String> {
+        
+         var quantityStringArray: [String] = []
+        for theItem in quantity {
+            quantityStringArray.append("\(theItem)")
+        }
+        print(quantityStringArray)
+     return quantityStringArray
+    } */
+    
+    
+        /* quantityString(itemQuantity)
+        
+        if !shoppingList.isEmpty {
+            shoppingList.insert(quantityString(itemQuantity)[0], atIndex: 0)
+        }
+        if !shoppingList.isEmpty {
+            shoppingList.insert(quantityString(itemQuantity)[1], atIndex: 2)
+        }
+        if !shoppingList.isEmpty {
+            shoppingList.insert(quantityString(itemQuantity)[2], atIndex: 4)
+        }
+        if !shoppingList.isEmpty {
+            shoppingList.insert(quantityString(itemQuantity)[3], atIndex: 6)
+        }
+*/
+       
+}
+
 }
